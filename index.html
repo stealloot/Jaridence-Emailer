@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+<meta name="description" content="Free Web tutorials">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Emailer</title>
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <style>
+    *{
+    margin:0;
+   padding:0;
+   box-sizing:border-box;
+}
+table{
+   cellpadding:0;
+   cellspacing:0;
+   border: none;
+   width:700px;
+   margin:auto;
+   font-family:arial;
+   padding:0rem 1rem;
+   
+}
+table #step-1{
+   background-image:url("image/img1.png");
+   width:100%;
+   height:300px;
+   background-repeat:no-repeat;
+   background-position:center;
+   background-size:cover;
+   
+}
+#step-2 img{
+   padding:1rem 0px;
+   width:200px;
+   float:right;
+}
+ #step-3 p{
+  font-weight:bold;
+  
+}
+#step-3 h5{
+   border:2px solid #4dffdb;
+   border-radius:20px;
+   padding:1rem;
+   margin:1rem 0rem;
+   word-spacing: 9px;
+   line-height:1.2;
+  
+}
+
+#step-3 h5 span{
+   font-weight:bolder;
+   
+}
+#step-3 h4{
+   margin:1rem 0rem;
+   font-size:14px;
+   word-spacing: 5px;
+   line-height:1.2;
+   
+}
+#step-3 ol{
+   padding:0px 15px;
+}
+#step-3 ol li{
+   padding:10px;
+  line-height:1.4;
+}
+#step-3 ul{
+   padding:0px 15px;
+   list-style:none;
+}
+#step-3 ul li{
+   padding:10px;
+   line-height:1.4;
+}
+ul li::before {
+  content:"\2022";
+  color: #009973;
+  font-weight:bold;
+ display:inline-block;
+  width: 2em;
+  margin-left: -1em;
+}
+#step-3 h3{
+   font-size:16px;
+   text-align:center;
+} 
+#step-3 a{
+  color:black;
+}
+#step-3 h1{
+   text-align:center; 
+   margin:1rem 0rem; 
+}
+#step-3 #register{
+   text-decoration:none;
+   font-size:14px;
+  border:1px solid grey;
+  padding:8px 12px;
+  background: #009973;
+  color:white;
+  border:none;
+  border-radius:10px;
+}
+#step-3 .para{
+  word-spacing:3px;
+  font-size:15px;
+  font-weight:normal;
+}
+.para span{
+   font-weight:bold;
+}
+#step-4 img{
+   padding:1rem 0px;
+   width:200px;
+   float:left;
+}
+#step-5 p{
+   font-weight:bold;
+}
+#step-6 h1{
+  text-align:center;
+}
+#step-6 img{
+   padding:1rem 0px;
+   width:200px;
+}
+#step-6 h4{
+   text-align:center;
+   border:1px solid black;
+   border-bottom:2px solid black;
+   border-left:2px solid black;
+   padding:1rem;
+}
+#step-6 h3{
+  padding:1rem;
+  font-size:1rem;
+  font-weight:normal;
+  text-align:center;
+}
+#step-6 h3 span{
+   text-decoration:underline;
+}
+#step-6 h5{
+   font-size:15px;
+  font-weight:bold;
+  text-align:center;
+}
+#step-6 p{
+   font-size:13px;
+  padding:1rem 0rem;
+}
+#step-6 p span{
+   font-weight:bold;
+  font-size:14px;
+}
+#step-7{
+   display:flex;
+   align-items:center;
+   justify-content: space-between;
+   padding:1rem 0rem;
+}
+#step-7  .logo-1 img{
+  width:200px;
+  margin-bottom:20px;
+}
+.logo-1 p{
+   font-size:13px;
+  padding:1rem 0rem;
+  line-height:1.4;
+}
+.logo-1 p span{
+   font-weight:bold;
+  font-size:14px;
+}
+#step-7  .logo-2 img{
+  width:150px;
+  
+  }
+.logo-2 p{
+   font-size:13px;
+  padding:1rem 0rem;
+  line-height:1.6;
+}
+.logo-2 p span{
+   font-weight:bold;
+  font-size:14px;
+}
+
+#step-8{
+  background-color:#d9d9d9;
+  
+}
+#step-8 p{
+  font-size:13px;
+  margin:1rem;
+}
+#step-8 p span{
+   font-weight:bold;
+  font-size:14px;
+}
+@media (max-width:900px){
+	
+}
+
+@media (max-width:550px){
+       table{
+     width:100%;
+	  padding:0rem 10px;
+     }
+      table #step-1{
+   background-image:url("image/img2.png");
+    width:100%;
+    height:40vh;
+       }  
+    #step-3 h5{
+      font-size:1rem;
+   
+   }  
+   
+   
+
+}
+  
+  </style>
+</head>
+<body>
+   <table>
+      <tr id="step-1">
+          <td> </td>
+      </tr>
+
+    <tr id="step-2">
+         <td><img src="image/jaridance.png"> 
+   </td>
+    </tr>
+    <tr id="step-3">
+        <td><p>Dear <%= recipient.Salutation %> <%= recipient.firstName %> <%= <br/>
+recipient.lastName %>,
+</p> 
+<h5>Boehringer Ingelheim and Eli Lilly are pleased to announce the launch of the<span>
+JARDIANCE® (empagliflozin) in Heart Failure Access Program.</span> Eligible adult
+patients with heart failure with a reduced ejection fraction will have access to
+JARDIANCE® 10mg at no charge, subject to the program terms and conditions.</h5>
+ <h4>JARDIANCE® is now indicated for the treatment of adults with symptomatic heart failure with reduced ejection fraction (HFrEF), as an adjunct to standard of care therapy. Importantly, the new indication covers patients with or without type 2 diabetes.1</h4>
+<h4>The JARDIANCE® in Heart Failure Access Program is designed to:</h4>
+<ol>
+  <li>	Allow healthcare professionals to gain clinical experience and become familiar with JARDIANCE® in the treatment of HFrEF following registration of this indication, and prior to PBS listing.</li>
+   <li>	Help minimise financial impact on patients, by providing JARDIANCE® to eligible patients at no charge, subject to the terms and conditions of the program.*</li>
+   <li>	Support the Quality Use of Medicines in the treatment of Heart Failure with reduced ejection fraction.</li>
+</ol>
+<h6>*	Health care professional consultation costs and associated expenses if charged to the patient are not covered under the Program.</h6>
+<h4>Eligible patients will receive JARDIANCE® 10 mg at no charge until such time as:</h4>
+<ul>
+  <li>The treating physician deems the eligible patient is not demonstrating an ongoing clinical benefit from JARDIANCE® treatment; or</li>
+  <li>	JARDIANCE® 10 mg is listed on the PBS for the treatment of heart failure (HFrEF); or</li>
+<li>	30 June 2022, whichever occurs first or as notified by Boehringer Ingelheim and Eli Lilly by reasonable written notice.</li>
+</ul>
+<h3>
+To learn more about the Program, or register as a Program prescriber, please<br/> click the icon below to access the online portal or visit<br/><a href="#">www.​​​​​​​​​​​​jardianceaccess.com.au</a></h3>
+<h1><a href="#" id="register">REGISTER NOW</a></h1>
+<p class="para">If you have any questions regarding the Program,<span> please contact the Program<br/> Administrator at support@jardianceaccess.com.au</span> or on 1800 051 497.
+ </p>
+</td>
+    </tr>
+   <tr id="step-4">
+      <td><img src="image/logo.png" alt=" ">
+   </td>
+   </tr>
+   <tr id="step-5">
+      <td> 
+      <p>T: 1800 051 497<br/>
+E: support@jardianceaccess.com.au </p>
+</td>
+    </tr>
+  <tr id="step-6">
+   <td><h1><img src="image/jaridance.png"></h1>
+   <h4> PBS Information: JARDIANCE® in Heart Failure with reduced ejection fraction
+is not listed on the PBS.
+</h4>
+<h3>BEFORE PRESCRIBING, PLEASE REVIEW THE FULL PRODUCT INFORMATION AVAILABLE FROM BOEHRINGER INGELHEIM OR BY CLICKING <span>HERE</span> </h3>
+<h5>Further information is available on request from Boehringer Ingelheim</h5>
+<p><span>Abbreviations:</span> HFrEF, heart failure with reduced ejection fraction; LVEF, left ventricular ejection fraction; NYHA, New
+York Heart Association; PBS, Pharmaceutical Benefits Scheme.<br/><br/><br/>
+<span>Reference:</span> 1. JARDIANCE® Product Information, December 2021.
+ </p>
+ </td>
+  </tr>
+ <tr id="step-7">
+   <td class="logo-1"><img src="image/BI-logo.png" alt=" "> 
+   <p><span>Boehringer Ingelheim Pty Limited.</span><br/>
+ABN 52 000 452 308<br/>
+78 Waterloo Road, North Ryde</br>
+NSW, 2113 Australia</br>
+Copyright© 2021. PC-AU-102470<br/>
+Prepared December, 2021</p>
+</td>
+   <td class="logo-2"><img src="image/Lilly-logo.png" alt=" ">
+<p><span>Eli Lilly Australia Pty Limited.</span><br/>
+ABN 39 000 233 992<br/>
+112 Wharf Road, West Ryde<br/>
+NSW, 2114 Australia<br/>
+Copyright© 2021 </p>
+</td>
+  </tr>
+   <tr id="step-8">
+     <td><p><span>Disclaimer</span><br/>
+This link will take you to a third party website. The link is provided to you as a service for informational purposes only and
+is not intended as advice. Boehringer Ingelheim and partners are not responsible for, make no representation in regards
+to, and do not control, the linked site, its contents, nor its security and privacy practices. The inclusion of any link does not
+imply endorsement nor recommendation of the website and its contents by Boehringer Ingelheim and its partners. Any
+information contained may not be accurate and may not comply with local regulatory requirements. Your use of the
+website and reliance on any information contained therein is at your own risk. We encourage you to read the terms of use
+and privacy policy of the site if you proceed.
+<br/><br/>
+<span>Adverse Event Reporting</span><br/>
+If you need to report an Adverse event for Boehringer Ingelheim products, do not reply to this email, but contact our
+Medical Information on (02) 8875 8800 or 1800 226 315.<br/><br/><span>Unsubscribe</span><br/>
+Boehringer Ingelheim Pty Ltd and Eli Lilly Australia Pty Ltd ("ELAPL") are bound by the Australian Privacy Principles and
+adheres to these Principles. You can view the Eli Lilly Australia Pty Ltd Privacy Policy at https://www.lillyprivacy.com/auen/hcp and the Boehringer Ingelheim Pty Ltd Privacy Policy at https://www.boehringer-ingelheim.com.au/data-privacy. If
+you no longer wish to receive email communications from Boehringer Ingelheim Pty Ltd about our products, services and
+events, you may unsubscribe here.
+<br/><br/><span>CONFIDENTIALITY NOTICE -</span><br/> This message is intended for the named healthcare professional recipient only. It is not
+intended for members of the general public. If you are not the intended recipient, please delete this message. </p> </td>
+    </tr>
+  </table>
+
+</body>
+</html>
